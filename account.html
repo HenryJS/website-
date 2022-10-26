@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Green Property </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+            <div class="container">
+             <div class="navbar">
+                <div class="logo">
+                 <image src="images/logo.png" width="125px"></image>
+                </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="products.html">Product</a></li> 
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="account.html">Book a Visit</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+<!-----account page ----->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/residential.jpg" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+
+                    <form action="connect.php" id="RegForm" method="post">
+                        <input type="text" placeholder="Name" name="name">
+                        <input type="e-mail" placeholder="e-mail" name="email">
+                        <input type="text" placeholder="Phone" name="phone">
+                        <button type="submit" class="btn">Book a visit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Follow us on:</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                </ul>
+                <p>Call us on 0726177576</p>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo.png">
+                <p><strong>Mission.</strong> <br>To establish a botique real estate company with a strong local brand and dedicated staff</p>
+            </div> 
+            <div class="footer-col-3">
+                <p><strong>Our Purpose</strong> <br>Our Purpose. Dedicated to provide residential areas for our customers</p>
+            </div> 
+               
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2022 - Green Property</p>
+    </div>
+</div>
+<!-----js for toggle form---->
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login(){
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+
+
+</script>
+    </body>
+</html>
